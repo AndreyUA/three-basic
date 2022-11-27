@@ -22,8 +22,10 @@ const SIZES = {
 };
 
 // Camera
-const camera = new THREE.PerspectiveCamera(75, SIZES.width, SIZES.height);
+const camera = new THREE.PerspectiveCamera(75, SIZES.width / SIZES.height);
 camera.position.z = 3;
+camera.position.y = 1;
+camera.position.x = 1;
 scene.add(camera);
 
 // Renderer
