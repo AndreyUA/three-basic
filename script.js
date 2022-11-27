@@ -23,4 +23,13 @@ const SIZES = {
 
 // Camera
 const camera = new THREE.PerspectiveCamera(75, SIZES.width, SIZES.height);
+camera.position.z = 3;
 scene.add(camera);
+
+// Renderer
+const canvas = document.getElementById("webgl");
+const renderer = new THREE.WebGLRenderer({
+  canvas,
+});
+renderer.setSize(SIZES.width, SIZES.height);
+renderer.render(scene, camera);
